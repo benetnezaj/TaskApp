@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F0F8FF">
+  <meta name="description" content="A little focus. A little progress. A shared space for everyone's tasks.">
+  <title>Task App · Make room for progress</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./" aria-label="Task App home"><span class="brand-icon" aria-hidden="true">✓</span> task<span class="brand-dot">.</span></a><span class="header-note">ONE TASK AT A TIME</span></header>
+  <main>
+    <section id="login-screen" class="login-layout" aria-labelledby="login-title">
+      <div class="intro"><p class="eyebrow"><span></span> SMALL STEPS. REAL PROGRESS.</p><h1>Make room<br>for <span>what matters.</span></h1><p class="intro-copy">Clear your mind, organize your day, and turn your to-dos into done.</p><div class="illustration" aria-hidden="true"><div class="paper"><div class="paper-label">A LITTLE MORE DONE</div><div class="sample-row"><i>✓</i><s>Make a plan</s></div><div class="sample-row"><i>✓</i><s>Find your focus</s></div><div class="sample-row"><i class="unchecked"></i>Take the next step</div><div class="paper-bottom"><span>Progress looks good on you.</span><b>↗</b></div></div><span class="spark">✳</span></div></div>
+      <div class="login-card"><span class="card-kicker">YOUR SHARED TASK SPACE</span><h2 id="login-title">Let’s get you started.</h2><p>Pick a username and enter the access password.</p><form id="login-form"><label for="username">Username</label><input id="username" name="username" placeholder="What should we call you?" autocomplete="username" maxlength="40" required><label for="password">Password</label><input id="password" name="password" type="password" placeholder="Enter your access password" autocomplete="current-password" required aria-describedby="login-error"><p id="login-error" class="error" role="alert"></p><button class="primary-button" type="submit">Enter my workspace <span aria-hidden="true">↗</span></button></form><p class="local-note"><span aria-hidden="true">◉</span> Everyone in this browser can view tasks. Only the author can change theirs.</p></div>
+    </section>
+    <section id="task-screen" class="workspace" hidden aria-labelledby="workspace-title"><div class="workspace-top"><div><p class="eyebrow">YOUR SPACE TO MAKE PROGRESS</p><h1 id="workspace-title">Let’s do this, <span id="display-name"></span>.</h1><p class="intro-copy">Everyone's work, in one place. You can complete or remove your own tasks.</p></div><button id="logout-button" class="quiet-button" type="button">Sign out ↗</button></div><div class="task-panel"><div class="panel-heading"><h2>Shared tasks <span id="task-count">0</span></h2><span id="progress-label">Ready when you are</span></div><form id="task-form" class="task-form"><label class="sr-only" for="task-input">New task</label><input id="task-input" placeholder="What’s your next step?" maxlength="300" required><button class="primary-button" type="submit">Add task <span aria-hidden="true">+</span></button></form><p id="storage-error" class="error" role="alert"></p><ul id="task-list" aria-label="Everyone's tasks"></ul><div id="empty-state" class="empty-state"><span aria-hidden="true">✓</span><h3>A little space for big things.</h3><p>Add your first task to get moving.</p></div><div class="panel-footer"><span id="remaining-count">0 tasks remaining</span><span>YOU’VE GOT THIS.</span></div></div><p id="task-announcement" class="sr-only" role="status" aria-live="polite"></p></section>
+  </main>
+  <footer class="site-footer"><span>Less mental clutter. More momentum.</span><span>MADE FOR YOUR EVERYDAY ↗</span></footer>
+</body>
+</html>
+
